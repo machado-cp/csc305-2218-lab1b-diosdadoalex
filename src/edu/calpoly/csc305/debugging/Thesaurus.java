@@ -12,10 +12,14 @@ public class Thesaurus {
     synonyms = new HashMap<>();
   }
 
+  /**
+   * adds word to Hash if not already in HashMap.
+   * Otherwise adds Alternatives to Thesaurus.
+   */
   public void addAlternatives(String word, String ... alternatives) {
-    if(!synonyms.containsKey(word)){
+    if (!synonyms.containsKey(word)) {
       synonyms.put(word, Arrays.asList(alternatives));
-    } else{
+    } else {
       synonyms.get(word).addAll(Arrays.asList(alternatives));
     }
 
